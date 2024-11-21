@@ -1,0 +1,35 @@
+service: product-api
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-south-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:PutItem
+        - dynamodb:GetItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: arn:aws:iam::719525708105:role/product-api-dev-ap-south-1-lambdaRole
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - http:
+          path: /products
+          method: POST
+          cors: true
+      - http:
+          path: /products/{id}
+          method: GET
+          cors: true
+      - http:
+          path: /products/{id}
+          method: PUT
+          cors: true
+      - http:
+          path: /products/{id}
+          method: DELETE
+          cors: true

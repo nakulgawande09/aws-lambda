@@ -1,0 +1,22 @@
+{
+  "name": "aws-lambda",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "deploy": "serverless deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "serverless-http": "^3.2.0",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "serverless": "^3.39.0"
+  }
+}
