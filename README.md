@@ -132,11 +132,6 @@ node index.js
 
 The application is deployed using the Serverless Framework. The configuration is defined in `serverless.yml`:
 
-```yaml:serverless.yml
-startLine: 1
-endLine: 35
-```
-
 Deploy using:
 
 ```bash
