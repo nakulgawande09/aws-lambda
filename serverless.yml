@@ -11,7 +11,7 @@ provider:
         - dynamodb:GetItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
-      Resource: arn:aws:iam::719525708105:role/product-api-dev-ap-south-1-lambdaRole
+      Resource: arn:aws:dynamodb:ap-south-1:user-id:table/product-api-dev-products
 
 functions:
   api:
